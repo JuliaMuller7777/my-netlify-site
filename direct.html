@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Decode the job description before the interview — $7 | B2B Marketcraft</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #f9f8f6;
+    --card: #ffffff;
+    --accent: #8C1A1A;
+    --accent-dark: #6e1414;
+    --border: #e0dbd6;
+    --text: #0f0f0f;
+    --muted: #5e5a55;
+    --faint: #8a857f;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'Manrope', -apple-system, BlinkMacSystemFont, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.55;
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+  }
+  .container {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+  .wide {
+    max-width: 920px;
+  }
+
+  /* Top bar */
+  .topbar {
+    border-bottom: 1px solid var(--border);
+    background: var(--bg);
+  }
+  .topbar-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 24px;
+    max-width: 1100px;
+    margin: 0 auto;
+    font-size: 14px;
+  }
+  .brand {
+    font-weight: 700;
+    letter-spacing: 0.02em;
+  }
+  .brand .dot { color: var(--accent); }
+  .topbar a {
+    color: var(--muted);
+    text-decoration: none;
+    margin-left: 24px;
+  }
+  .topbar a:hover { color: var(--text); }
+
+  /* Hero */
+  .hero {
+    padding: 80px 0 56px;
+    text-align: left;
+  }
+  .eyebrow {
+    font-size: 12px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--accent);
+    font-weight: 600;
+    margin-bottom: 20px;
+  }
+  h1 {
+    font-size: 48px;
+    line-height: 1.1;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 22px;
+  }
+  .subhead {
+    font-size: 19px;
+    color: var(--muted);
+    max-width: 620px;
+    margin-bottom: 36px;
+    line-height: 1.5;
+  }
+  .meta {
+    display: flex;
+    gap: 28px;
+    flex-wrap: wrap;
+    font-size: 14px;
+    color: var(--faint);
+    margin-bottom: 36px;
+  }
+  .meta span::before {
+    content: "•";
+    color: var(--accent);
+    margin-right: 8px;
+    font-weight: 700;
+  }
+  .meta span:first-child::before { content: ""; margin-right: 0; }
+
+  /* Buy block */
+  .buy-block {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 36px 32px 28px;
+    margin: 0 0 64px;
+  }
+  .price-row {
+    display: flex;
+    align-items: baseline;
+    gap: 16px;
+    margin-bottom: 24px;
+  }
+  .price {
+    font-size: 56px;
+    font-weight: 800;
+    letter-spacing: -0.03em;
+  }
+  .price-note {
+    color: var(--muted);
+    font-size: 15px;
+  }
+  .cta {
+    display: block;
+    width: 100%;
+    background: var(--accent);
+    color: white;
+    border: none;
+    padding: 20px;
+    font-size: 17px;
+    font-weight: 600;
+    font-family: inherit;
+    letter-spacing: 0.01em;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.15s;
+  }
+  .cta:hover { background: var(--accent-dark); }
+  .cta-sub {
+    text-align: center;
+    font-size: 13px;
+    color: var(--faint);
+    margin-top: 12px;
+  }
+
+  /* Option line — the playbook's centerpiece */
+  .option-line {
+    border-top: 1px solid var(--border);
+    margin-top: 28px;
+    padding-top: 24px;
+    text-align: center;
+  }
+  .option-line p {
+    font-size: 16px;
+    color: var(--muted);
+    margin-bottom: 12px;
+  }
+  .option-line .or {
+    display: inline-block;
+    background: var(--bg);
+    padding: 0 12px;
+    color: var(--faint);
+    font-size: 12px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-top: -36px;
+    position: relative;
+    top: -2px;
+  }
+  .option-line a {
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: 600;
+    border-bottom: 1px solid var(--accent);
+    padding-bottom: 2px;
+  }
+  .option-line a:hover { color: var(--accent-dark); }
+  .option-line .micro {
+    font-size: 13px;
+    color: var(--faint);
+    margin-top: 10px;
+  }
+
+  /* Sections */
+  section { padding: 64px 0; }
+  section.tight { padding: 48px 0; }
+  h2 {
+    font-size: 28px;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    margin-bottom: 24px;
+  }
+  h3 {
+    font-size: 17px;
+    font-weight: 700;
+    margin-bottom: 8px;
+  }
+  p.lede {
+    font-size: 17px;
+    color: var(--muted);
+    margin-bottom: 24px;
+  }
+
+  /* Sample card — quotes from the Intuit report */
+  .sample-intro {
+    font-size: 14px;
+    color: var(--faint);
+    margin-bottom: 18px;
+    letter-spacing: 0.02em;
+  }
+  .sample-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 36px 36px 32px;
+    margin-bottom: 24px;
+  }
+  .sample-card .role {
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--faint);
+    font-weight: 600;
+    margin-bottom: 8px;
+  }
+  .sample-card .title {
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 28px;
+    letter-spacing: -0.01em;
+  }
+  .signal {
+    padding: 20px 0;
+    border-top: 1px solid var(--border);
+  }
+  .signal:first-of-type { border-top: none; padding-top: 0; }
+  .signal-label {
+    font-size: 11px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--accent);
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+  .signal p {
+    font-size: 15px;
+    color: var(--text);
+    line-height: 1.6;
+  }
+
+  /* Inside the report — bullets */
+  .inside-grid {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 36px;
+  }
+  .inside-grid ul {
+    list-style: none;
+  }
+  .inside-grid li {
+    padding: 14px 0;
+    border-top: 1px solid var(--border);
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+  }
+  .inside-grid li:first-child { border-top: none; padding-top: 0; }
+  .inside-grid li:last-child { padding-bottom: 0; }
+  .inside-grid .num {
+    color: var(--accent);
+    font-weight: 700;
+    min-width: 28px;
+    font-size: 14px;
+  }
+  .inside-grid .ig-text strong {
+    display: block;
+    margin-bottom: 2px;
+    font-weight: 600;
+  }
+  .inside-grid .ig-text span {
+    color: var(--muted);
+    font-size: 14px;
+  }
+
+  /* Who this is for */
+  .audience {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 32px 36px;
+  }
+  .audience p { color: var(--muted); margin-bottom: 14px; }
+  .audience p:last-child { margin-bottom: 0; }
+  .audience strong { color: var(--text); font-weight: 600; }
+
+  /* FAQ */
+  .faq-item {
+    border-top: 1px solid var(--border);
+    padding: 24px 0;
+  }
+  .faq-item:last-of-type { border-bottom: 1px solid var(--border); }
+  .faq-q {
+    font-weight: 700;
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+  .faq-a {
+    color: var(--muted);
+    font-size: 15px;
+    line-height: 1.6;
+  }
+
+  /* Final CTA */
+  .final-cta {
+    text-align: center;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 56px 36px;
+  }
+  .final-cta h2 { margin-bottom: 12px; }
+  .final-cta p { color: var(--muted); margin-bottom: 28px; }
+  .final-cta .cta { max-width: 360px; margin: 0 auto; }
+
+  /* Footer */
+  footer {
+    border-top: 1px solid var(--border);
+    padding: 32px 0 48px;
+    font-size: 13px;
+    color: var(--faint);
+    margin-top: 56px;
+  }
+  footer .container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+  footer a {
+    color: var(--faint);
+    text-decoration: none;
+    margin-left: 18px;
+  }
+  footer a:hover { color: var(--text); }
+
+  /* Responsive */
+  @media (max-width: 720px) {
+    h1 { font-size: 34px; }
+    .price { font-size: 44px; }
+    .hero { padding: 56px 0 40px; }
+    section { padding: 48px 0; }
+    .buy-block { padding: 28px 22px 22px; }
+    .sample-card { padding: 28px 22px 22px; }
+    .inside-grid { padding: 28px 22px; }
+    .audience { padding: 24px 22px; }
+    .final-cta { padding: 40px 24px; }
+    .topbar a { display: none; }
+    .topbar a.always { display: inline; }
+  }
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="topbar-inner">
+    <div class="brand">B2B <span class="dot">·</span> MARKETCRAFT</div>
+    <nav>
+      <a href="https://b2bmarketcraft.com/about-marketcraft-job-signals-report">About the report</a>
+      <a href="https://b2bmarketcraft.com" class="always">Monthly plans</a>
+    </nav>
+  </div>
+</div>
+
+<header class="hero">
+  <div class="container">
+    <div class="eyebrow">One job description. One resume. One report. $7.</div>
+    <h1>See what the job description won't tell you.</h1>
+    <p class="subhead">Drop in a B2B marketing role you are evaluating, along with a version of your resume. Get a decoded report covering the real ask, what success looks like, the unwritten prerequisite, the question to ask in the interview, and the compensation read. The resume is what makes the report personal: it tells you which of your experiences to lead with and which to deprioritize against the role.</p>
+    <div class="meta">
+      <span>10 or more signals per report</span>
+      <span>Personalized to your resume</span>
+      <span>Delivered in under 10 minutes</span>
+    </div>
+  </div>
+</header>
+
+<div class="container">
+  <div class="buy-block">
+    <div class="price-row">
+      <div class="price">$7</div>
+      <div class="price-note">One-time. One report. Yours to keep.</div>
+    </div>
+    <a class="cta" href="https://buy.stripe.com/bJe6oAeCX34NaHR0bZ0kE08">Get the report — $7</a>
+    <div class="cta-sub">After checkout you will get a short form. Paste the job description and attach a version of your resume. Both are required. The resume can be abridged or outdated, just give us something representative of your background. Report lands in your inbox in under 10 minutes.</div>
+
+    <div class="option-line">
+      <span class="or">or</span>
+      <p>Evaluating more than one role? Get this report <strong>free</strong> inside a 7-day trial of <strong>Stride</strong>. 30 reports a month, $19 after the trial. Cancel anytime.</p>
+      <a href="https://buy.stripe.com/eVq8wI66r6gZ8zJaQD0kE04">Start the 7-day trial instead →</a>
+      <div class="micro">Card required. Renews monthly. No charge during trial.</div>
+    </div>
+  </div>
+</div>
+
+<section>
+  <div class="container">
+    <h2>This is what one report actually says.</h2>
+    <p class="lede">Real excerpts from a recent report on a senior paid media role at a large financial technology company. Names redacted. Output verbatim.</p>
+
+    <div class="sample-card">
+      <div class="role">Sample · Demand Generation</div>
+      <div class="title">Paid Media Staff Marketing Manager</div>
+
+      <div class="signal">
+        <div class="signal-label">The Real Ask</div>
+        <p>"This role is not looking for a channel executor. They want the person who owns the full paid media vision and is accountable for every dollar from brand awareness to conversion. The phrase 'revolutionize the way we go to market' signals the current approach is either stale or under-resourced — they need someone with a point of view, not someone to optimize what exists."</p>
+      </div>
+
+      <div class="signal">
+        <div class="signal-label">The Question To Ask</div>
+        <p>"Ask: 'How is media performance measured across the four products — individual product-level cost-per-acquisition targets, or a shared portfolio efficiency metric, and who owns that definition?' This surfaces whether there is internal alignment on success, reveals how much budget autonomy you will actually have, and signals you think in portfolio architecture rather than isolated campaigns."</p>
+      </div>
+
+      <div class="signal">
+        <div class="signal-label">The Unwritten Prereq</div>
+        <p>"Listed as 'a bonus,' but given the audience is tax professionals — a finite, identifiable, highly specific segment — account-based marketing thinking is almost certainly the operating model for mid-funnel and pipeline acceleration. The candidates who lose this role present ABM as a nice-to-have they have dabbled in. The candidate who wins positions it as a core competency with specific proof of how it changed audience targeting and pipeline quality."</p>
+      </div>
+
+      <div class="signal">
+        <div class="signal-label">Comp Reality Check</div>
+        <p>"The published range represents nearly $55,000 in variance — how you position yourself in the negotiation matters enormously. Do not accept an offer anchored at the midpoint without a direct conversation about equity, performance bonus structure, and annual review cycles. At this level, total compensation architecture matters as much as base salary."</p>
+      </div>
+    </div>
+
+    <p style="font-size: 13px; color: var(--faint); text-align: center; margin-top: 16px;">
+      Every report decodes a different role with signals tailored to it. <a href="https://b2bmarketcraft.com/about-marketcraft-job-signals-report" style="color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--accent); padding-bottom: 1px;">See more samples</a>
+    </p>
+  </div>
+</section>
+
+<section style="background: var(--bg);">
+  <div class="container">
+    <h2>What every report does for you.</h2>
+    <p class="lede">Ten or more signals per report. Each one calibrated to the specific role and read against your resume.</p>
+
+    <div class="inside-grid">
+      <ul>
+        <li><div class="ig-text"><strong>Decodes the role.</strong><span>What the hiring team is actually hiring for, what is at stake, and how they will measure success at 90 days and 12 months.</span></div></li>
+        <li><div class="ig-text"><strong>Positions you.</strong><span>Every signal is read against your resume so you know which experiences to lead with, which to deprioritize, and where your background lines up with what the hiring team is actually evaluating.</span></div></li>
+        <li><div class="ig-text"><strong>Hands you the interview play.</strong><span>The strategic question that signals authority. The stakeholder politics you did not know you would be navigating. The requirement labeled as a "bonus" that is actually a core test.</span></div></li>
+        <li><div class="ig-text"><strong>Reads the compensation.</strong><span>Where in the published range your experience profile should land, and how to talk about it without leaving money on the table.</span></div></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <h2>Who this is for.</h2>
+    <div class="audience">
+      <p><strong>B2B marketers evaluating their next role.</strong> You already know how to read a job description. You are not here for literacy. You are here for the layer underneath: what the language signals about the team, the stakes, the politics, and the negotiation, read against the background you actually bring.</p>
+      <p>Demand generation, paid acquisition, campaign management, product marketing, revenue operations, growth, lifecycle, sales leadership, and adjacent functions. The framework is calibrated to B2B marketing roles across all levels.</p>
+    </div>
+  </div>
+</section>
+
+<section style="background: var(--bg);">
+  <div class="container">
+    <h2>Common questions.</h2>
+
+    <div class="faq-item">
+      <div class="faq-q">How does this work after I pay?</div>
+      <div class="faq-a">After checkout, you land on a short form. Paste the job description and attach a version of your resume. Both are required, and the resume can be abridged or outdated if that is what is handy. The report is generated and emailed to you in under 10 minutes.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">Why do you need my resume?</div>
+      <div class="faq-a">Without your resume the report is a generic decode of the job description. With it, every signal is read against your actual background. The report tells you which of your experiences are highest-value to lead with against this role, which to deprioritize, and how to frame your story for what the hiring team is actually evaluating. The resume is what makes it personal.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">What happens to my job description and resume after I submit them?</div>
+      <div class="faq-a">Both are used only to generate your report. Neither is stored beyond what is necessary to deliver. We do not sell data, do not use it for training, and do not share it.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">Will this rewrite my resume for me?</div>
+      <div class="faq-a">No. The report reads your resume against the role so it can tell you which experiences to lead with and which to deprioritize. The actual edit is yours. Most people find it takes about 30 minutes once they know what to aim at.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">What if I am evaluating more than one role?</div>
+      <div class="faq-a">The 7-day trial of Stride gives you 30 reports a month. If you are looking at three or more roles, the trial is the math. Cancel inside the 7 days if it is not for you.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">Is this written by AI?</div>
+      <div class="faq-a">Reports are generated using a structured prompt against Claude, with the framework, the signals, and the analytical rules locked. The framework is the product. The model is the engine.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">Refunds?</div>
+      <div class="faq-a">If the report misses on something material, reply to the delivery email and you will get your $7 back. No questions.</div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="final-cta">
+      <h2>Decode the role before you walk in.</h2>
+      <p>One job description. Ten or more signals. Seven dollars.</p>
+      <a class="cta" href="https://buy.stripe.com/bJe6oAeCX34NaHR0bZ0kE08">Get the report — $7</a>
+      <p style="margin-top: 18px; font-size: 13px; color: var(--faint);">Or <a href="https://buy.stripe.com/eVq8wI66r6gZ8zJaQD0kE04" style="color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--accent);">start a 7-day Stride trial</a> if you are evaluating more than one role.</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div>© 2026 B2B Marketcraft · <a href="mailto:support@b2bmarketcraft.com" style="margin-left: 0;">support@b2bmarketcraft.com</a></div>
+    <div>
+      <a href="https://billing.stripe.com/p/login/eVq5kwcuP20J5nx8Iv0kE00">Manage subscription</a>
+      <a href="https://b2bmarketcraft.com">b2bmarketcraft.com</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

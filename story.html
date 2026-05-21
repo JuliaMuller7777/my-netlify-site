@@ -1,0 +1,863 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The $7 job signals report | B2B Marketcraft</title>
+<meta name="description" content="A friend lost an interview because she misread the job description. This is the report built so that stops happening to B2B marketers. Drop in a role and a version of your resume, get ten or more decoded signals in under 10 minutes. $7.">
+
+<!--
+  ============================================================
+  B2B MARKETCRAFT - $7 JOB SIGNALS REPORT - LANDING PAGE V2 (story-led)
+  ============================================================
+  This is the story-led variant. It opens with the founder narrative.
+  It is the A/B counterpart to the existing direct/feature-led page.
+
+  BEFORE THIS GOES LIVE ON NETLIFY - status of three setup items:
+
+  1. STRIPE $7 LINK - DONE. The $7 Stripe Payment Link
+     (buy.stripe.com/bJe6oAeCX34NaHR0bZ0kE08) is wired into all
+     three $7 buttons below.
+
+  2. STRIPE SUCCESS URL - in that Payment Link's settings, set the
+     confirmation/redirect page to your post-purchase form URL
+     (the /job-signals-report-submission page). THAT url is the page
+     that fires the Purchase conversion event in Meta. Define it once,
+     here and in Stripe, so they match.
+
+  3. OG SHARE IMAGE - add a 1200x630 og:image once one exists
+     (marked TODO below).
+
+  Meta Pixel (ID 2556097768173758) is already installed in <head>.
+  It fires PageView on load, and InitiateCheckout when a $7 button is
+  clicked. Purchase fires on the Stripe success page, not on this page.
+  This is a separate Netlify site from the Framer b2bmarketcraft.com
+  site, so this Pixel snippet is required here on its own.
+  ============================================================
+-->
+
+<!-- Open Graph / social sharing -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="She didn't lose the interview because she wasn't good enough.">
+<meta property="og:description" content="She lost it because the job description was speaking a language nobody had taught her to read. The $7 job signals report decodes it for you.">
+<meta property="og:site_name" content="B2B Marketcraft">
+<!-- TODO: add og:image once a 1200x630 share card exists -->
+<!-- <meta property="og:image" content="https://b2bmarketcraft.com/og-job-signals.png"> -->
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" href="https://b2bmarketcraft.com/favicon.ico">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<!-- ============================================================
+     META (FACEBOOK) PIXEL - base code, ID 2556097768173758
+     Fires PageView on every page load.
+     ============================================================ -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '2556097768173758');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=2556097768173758&ev=PageView&noscript=1"/></noscript>
+<!-- End Meta Pixel Code -->
+
+<!-- GOOGLE ADS / GA4: paste gtag.js snippet here if needed -->
+<!-- LINKEDIN INSIGHT TAG: paste here if needed -->
+
+<style>
+  :root {
+    --bg: #ffffff;
+    --card: #ffffff;
+    --tint: #faf8f6;
+    --accent: #8C1A1A;
+    --accent-dark: #6e1414;
+    --border: #e0dbd6;
+    --text: #0f0f0f;
+    --muted: #5e5a55;
+    --faint: #8a857f;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'Manrope', -apple-system, BlinkMacSystemFont, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.55;
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+  }
+  .container {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+  .narrow { max-width: 680px; }
+
+  /* Top bar */
+  .topbar {
+    border-bottom: 1px solid var(--border);
+    background: var(--bg);
+  }
+  .topbar-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 24px;
+    max-width: 1100px;
+    margin: 0 auto;
+    font-size: 14px;
+  }
+  .brand {
+    font-weight: 700;
+    letter-spacing: 0.02em;
+  }
+  .brand .dot { color: var(--accent); }
+  .topbar a {
+    color: var(--muted);
+    text-decoration: none;
+    margin-left: 24px;
+  }
+  .topbar a:hover { color: var(--text); }
+
+  /* Hero */
+  .hero {
+    padding: 78px 0 60px;
+    text-align: left;
+  }
+  .eyebrow {
+    font-size: 12px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--accent);
+    font-weight: 700;
+    margin-bottom: 22px;
+  }
+  h1 {
+    font-size: 46px;
+    line-height: 1.12;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    margin-bottom: 22px;
+    max-width: 660px;
+  }
+  .subhead {
+    font-size: 19px;
+    color: var(--muted);
+    max-width: 600px;
+    margin-bottom: 30px;
+    line-height: 1.55;
+  }
+  .meta {
+    display: flex;
+    gap: 26px;
+    flex-wrap: wrap;
+    font-size: 13.5px;
+    color: var(--faint);
+    margin-bottom: 32px;
+  }
+  .meta span::before {
+    content: "\2022";
+    color: var(--accent);
+    margin-right: 8px;
+    font-weight: 700;
+  }
+  .meta span:first-child::before { content: ""; margin-right: 0; }
+
+  .hero-actions {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+    flex-wrap: wrap;
+  }
+  .btn {
+    display: inline-block;
+    background: var(--accent);
+    color: white;
+    border: none;
+    padding: 16px 30px;
+    font-size: 16px;
+    font-weight: 700;
+    font-family: inherit;
+    letter-spacing: 0.01em;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.15s;
+  }
+  .btn:hover { background: var(--accent-dark); }
+  .text-link {
+    color: var(--muted);
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 2px;
+  }
+  .text-link:hover { color: var(--text); border-color: var(--accent); }
+
+  /* Story section */
+  .story {
+    background: var(--tint);
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+    padding: 70px 0;
+  }
+  .story-label {
+    font-size: 12px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--accent);
+    font-weight: 700;
+    margin-bottom: 18px;
+  }
+  .story h2 {
+    font-size: 30px;
+    font-weight: 800;
+    line-height: 1.22;
+    letter-spacing: -0.015em;
+    margin-bottom: 28px;
+  }
+  .story p {
+    font-size: 18px;
+    color: var(--text);
+    line-height: 1.68;
+    margin-bottom: 20px;
+  }
+  .pullquote {
+    border-left: 3px solid var(--accent);
+    padding: 6px 0 6px 26px;
+    margin: 34px 0;
+    font-size: 23px;
+    font-weight: 700;
+    line-height: 1.38;
+    letter-spacing: -0.01em;
+    color: var(--text);
+  }
+  .founder-tag {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-top: 34px;
+    padding-top: 26px;
+    border-top: 1px solid var(--border);
+  }
+  .founder-mark {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: var(--accent);
+    color: #fff;
+    font-weight: 800;
+    font-size: 13px;
+    letter-spacing: 0.02em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+  .founder-tag .ft-text {
+    font-size: 14px;
+    color: var(--muted);
+    line-height: 1.45;
+  }
+  .founder-tag .ft-text strong {
+    display: block;
+    color: var(--text);
+    font-weight: 700;
+  }
+
+  /* Buy block */
+  .buy-wrap { padding: 64px 0 8px; }
+  .buy-block {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 36px 32px 28px;
+  }
+  .price-row {
+    display: flex;
+    align-items: baseline;
+    gap: 16px;
+    margin-bottom: 22px;
+  }
+  .price {
+    font-size: 56px;
+    font-weight: 800;
+    letter-spacing: -0.03em;
+  }
+  .price-note {
+    color: var(--muted);
+    font-size: 15px;
+  }
+  .cta {
+    display: block;
+    width: 100%;
+    background: var(--accent);
+    color: white;
+    border: none;
+    padding: 20px;
+    font-size: 17px;
+    font-weight: 700;
+    font-family: inherit;
+    letter-spacing: 0.01em;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.15s;
+  }
+  .cta:hover { background: var(--accent-dark); }
+  .cta-sub {
+    text-align: center;
+    font-size: 13px;
+    color: var(--faint);
+    margin-top: 12px;
+    line-height: 1.55;
+  }
+
+  /* Option line */
+  .option-line {
+    border-top: 1px solid var(--border);
+    margin-top: 28px;
+    padding-top: 26px;
+    text-align: center;
+  }
+  .option-line p {
+    font-size: 15.5px;
+    color: var(--muted);
+    margin-bottom: 12px;
+    line-height: 1.55;
+  }
+  .option-line .or {
+    display: inline-block;
+    background: var(--card);
+    padding: 0 12px;
+    color: var(--faint);
+    font-size: 12px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-top: -38px;
+    position: relative;
+    top: 2px;
+  }
+  .option-line a.olink {
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: 700;
+    border-bottom: 1px solid var(--accent);
+    padding-bottom: 2px;
+  }
+  .option-line a.olink:hover { color: var(--accent-dark); }
+  .option-line .micro {
+    font-size: 12.5px;
+    color: var(--faint);
+    margin-top: 10px;
+  }
+
+  /* Sections */
+  section { padding: 64px 0; }
+  h2.sec {
+    font-size: 28px;
+    font-weight: 800;
+    letter-spacing: -0.015em;
+    margin-bottom: 22px;
+  }
+  p.lede {
+    font-size: 17px;
+    color: var(--muted);
+    margin-bottom: 24px;
+    line-height: 1.6;
+  }
+
+  /* Sample card */
+  .sample-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 36px 36px 32px;
+    margin-bottom: 16px;
+  }
+  .sample-card .role {
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--faint);
+    font-weight: 700;
+    margin-bottom: 8px;
+  }
+  .sample-card .title {
+    font-size: 22px;
+    font-weight: 800;
+    margin-bottom: 26px;
+    letter-spacing: -0.01em;
+  }
+  .signal {
+    padding: 20px 0;
+    border-top: 1px solid var(--border);
+  }
+  .signal:first-of-type { border-top: none; padding-top: 0; }
+  .signal-label {
+    font-size: 11px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--accent);
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+  .signal p {
+    font-size: 15px;
+    color: var(--text);
+    line-height: 1.62;
+  }
+
+  /* Signals grid */
+  .inside-grid {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 36px;
+  }
+  .inside-grid ul { list-style: none; }
+  .inside-grid li {
+    padding: 14px 0;
+    border-top: 1px solid var(--border);
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+  }
+  .inside-grid li:first-child { border-top: none; padding-top: 0; }
+  .inside-grid li:last-child { padding-bottom: 0; }
+  .inside-grid .num {
+    color: var(--accent);
+    font-weight: 800;
+    min-width: 28px;
+    font-size: 14px;
+  }
+  .inside-grid .ig-text strong {
+    display: block;
+    margin-bottom: 2px;
+    font-weight: 700;
+  }
+  .inside-grid .ig-text .desc {
+    display: block;
+    color: var(--muted);
+    font-size: 14px;
+    line-height: 1.55;
+  }
+  .inside-grid .placeholder strong {
+    color: var(--faint);
+    font-style: italic;
+    font-weight: 500;
+  }
+
+  /* Audience */
+  .audience {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 32px 36px;
+  }
+  .audience p { color: var(--muted); margin-bottom: 14px; line-height: 1.6; }
+  .audience p:last-child { margin-bottom: 0; }
+  .audience strong { color: var(--text); font-weight: 700; }
+
+  /* FAQ */
+  .faq-item {
+    border-top: 1px solid var(--border);
+    padding: 24px 0;
+  }
+  .faq-item:last-of-type { border-bottom: 1px solid var(--border); }
+  .faq-q { font-weight: 700; font-size: 16px; margin-bottom: 10px; }
+  .faq-a { color: var(--muted); font-size: 15px; line-height: 1.62; }
+
+  /* Final CTA */
+  .final-cta {
+    text-align: center;
+    background: var(--tint);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 56px 36px;
+  }
+  .final-cta h2 { font-size: 28px; font-weight: 800; margin-bottom: 12px; letter-spacing: -0.015em; }
+  .final-cta p { color: var(--muted); margin-bottom: 28px; }
+  .final-cta .cta { max-width: 360px; margin: 0 auto; }
+
+  /* Footer */
+  footer {
+    border-top: 1px solid var(--border);
+    padding: 32px 0 48px;
+    font-size: 13px;
+    color: var(--faint);
+    margin-top: 56px;
+  }
+  footer .container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+  footer a {
+    color: var(--faint);
+    text-decoration: none;
+    margin-left: 18px;
+  }
+  footer a:hover { color: var(--text); }
+
+  /* Responsive */
+  @media (max-width: 720px) {
+    h1 { font-size: 33px; }
+    .story h2 { font-size: 25px; }
+    .pullquote { font-size: 20px; }
+    .price { font-size: 44px; }
+    .hero { padding: 54px 0 44px; }
+    .story { padding: 52px 0; }
+    section { padding: 48px 0; }
+    .buy-wrap { padding: 48px 0 4px; }
+    .buy-block { padding: 28px 22px 22px; }
+    .sample-card { padding: 28px 22px 22px; }
+    .inside-grid { padding: 28px 22px; }
+    .audience { padding: 24px 22px; }
+    .final-cta { padding: 40px 24px; }
+    .story p { font-size: 17px; }
+    .topbar a { display: none; }
+    .topbar a.always { display: inline; }
+  }
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="topbar-inner">
+    <div class="brand">B2B <span class="dot">&middot;</span> MARKETCRAFT</div>
+    <nav>
+      <a href="https://b2bmarketcraft.com/about-marketcraft-job-signals-report">About the report</a>
+      <a href="https://b2bmarketcraft.com" class="always">Monthly plans</a>
+    </nav>
+  </div>
+</div>
+
+<header class="hero">
+  <div class="container">
+    <div class="eyebrow">The job signals report &middot; $7</div>
+    <h1>She didn&rsquo;t lose the interview because she wasn&rsquo;t good enough.</h1>
+    <p class="subhead">She lost it because a job description carries signals she was never taught to read. B2B Marketcraft reads them for you. One job description, one version of your resume, one decoded report. $7, in under 10 minutes.</p>
+    <div class="meta">
+      <span>10 or more signals per report</span>
+      <span>Personalized to your resume</span>
+      <span>Delivered in under 10 minutes</span>
+    </div>
+    <div class="hero-actions">
+      <a class="btn" href="https://buy.stripe.com/bJe6oAeCX34NaHR0bZ0kE08" data-fbevent="initiate_checkout">Get the report for $7</a>
+      <a class="text-link" href="#story">Read why this exists</a>
+    </div>
+  </div>
+</header>
+
+<!-- ===================== STORY ===================== -->
+<section class="story" id="story">
+  <div class="container narrow">
+    <div class="story-label">Why this exists</div>
+    <h2>I can tell you the exact moment B2B Marketcraft started.</h2>
+
+    <p>A friend of mine, a sharp demand generation marketer, called me after an interview that had not gone well. She had prepared hard. She knew the company, the product, the metrics. She built a strong take-home assignment and delivered it well. But she walked out feeling like she had answered a different set of questions than the ones being asked.</p>
+
+    <p>When she sent me the job description afterward, I read it the way you can only read it when you are not the one in the room. Calmly, with nothing on the line. And the signal was sitting right there. The role was not really about campaigns. It was about rebuilding a function that had been neglected, and the hiring manager was quietly testing whether she could lead through ambiguity. The posting never said that outright. It just said &ldquo;manage demand generation.&rdquo;</p>
+
+    <div class="pullquote">She did not lose because she was not good enough. She lost because the job description was speaking a language nobody had taught her to read.</div>
+
+    <p>That conversation is why this exists. A job description carries far more signal than it spells out: the budget behind the role, or the lack of one. Whether it is a fresh mandate or a quiet backfill. Who the new hire will really answer to. What &ldquo;success&rdquo; will quietly be measured against in the first 90 days. Experienced operators read all of it on instinct. Most B2B marketers were simply never taught how.</p>
+
+    <p>So I built the thing that reads it for you. You drop in a B2B marketing role you are evaluating and a version of your resume. You get back a decoded report, ten or more signals, each one read against your actual background, before your first call. It is $7 because trying it once should be an easy call. Run it on one role you actually care about. If it earns a place in how you prepare, there is a monthly plan built for a full search: 30 reports for $19. You can decide that after you have seen a report, not before.</p>
+
+    <div class="founder-tag">
+      <div class="founder-mark">B2B</div>
+      <div class="ft-text">
+        <strong>Built by a B2B marketer</strong>
+        For B2B marketers. The framework is the work of someone who has read these job descriptions from both sides of the table.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== BUY BLOCK ===================== -->
+<div class="buy-wrap">
+  <div class="container">
+    <div class="buy-block">
+      <div class="price-row">
+        <div class="price">$7</div>
+        <div class="price-note">One-time. One report. Yours to keep.</div>
+      </div>
+      <a class="cta" href="https://buy.stripe.com/bJe6oAeCX34NaHR0bZ0kE08" data-fbevent="initiate_checkout">Get the report for $7</a>
+      <div class="cta-sub">After checkout you get a short form. Paste the job description and attach a version of your resume. Both are required. The resume can be abridged or outdated, just give us something representative of your background. Your report lands in your inbox in under 10 minutes.</div>
+
+      <div class="option-line">
+        <span class="or">or</span>
+        <p>Evaluating more than one role? Get this report <strong>free</strong> inside a 7-day trial of the monthly plan. <strong>30 reports a month, $19</strong> after the trial. Cancel anytime.</p>
+        <a class="olink" href="https://buy.stripe.com/eVq8wI66r6gZ8zJaQD0kE04" data-fbevent="trial_click">Start the 7-day trial instead</a>
+        <div class="micro">Card required. Renews monthly. No charge during the trial.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===================== SAMPLE ===================== -->
+<section>
+  <div class="container">
+    <h2 class="sec">This is what one report actually says.</h2>
+    <p class="lede">Real excerpts from one recent report. Yours will look different. Every report is uniquely structured to the role and your background. Names redacted. Output verbatim.</p>
+
+    <div class="sample-card">
+      <div class="role">Sample &middot; Demand Generation</div>
+      <div class="title">Senior Manager, Paid Media</div>
+
+      <div class="signal">
+        <div class="signal-label">The Real Ask</div>
+        <p>&ldquo;This role is not looking for a channel executor who reports up to a strategy owner. They want the person who owns the full paid media vision and is accountable for every dollar from brand awareness to conversion. The phrase &lsquo;revolutionize the way we go to market&rsquo; signals that the current approach is either stale or under-resourced, and they need someone who will come in with a point of view, not just optimize what exists.&rdquo;</p>
+      </div>
+
+      <div class="signal">
+        <div class="signal-label">The Question To Ask</div>
+        <p>&ldquo;How is media performance currently measured across the product portfolio: are channels evaluated against individual product-level cost-per-acquisition targets, or is there a shared portfolio efficiency metric, and who owns that definition? This question does three things at once. It surfaces whether there is internal alignment on success criteria, it reveals how much budget autonomy you will actually have, and it signals that you think in terms of portfolio architecture rather than isolated campaigns.&rdquo;</p>
+      </div>
+
+      <div class="signal">
+        <div class="signal-label">What Success Really Looks Like</div>
+        <p>&ldquo;At 90 days they will expect a written diagnosis of where the current paid media spend is leaking, not a strategy deck. By month 12 they will expect at least one campaign restructure that produced measurable lift on a metric the CFO already tracks. Anything you do that does not ladder to a number on the company&rsquo;s existing scorecard will be invisible.&rdquo;</p>
+      </div>
+
+      <div class="signal">
+        <div class="signal-label">The Unwritten Prereq</div>
+        <p>&ldquo;The listing calls &lsquo;experience with attribution modeling&rsquo; a plus. In context, it is not a plus. It is the prerequisite for everything else. Walk in with a specific point of view on the limits of last-touch and the right cutover criteria to multi-touch, or you will not be the candidate they remember.&rdquo;</p>
+      </div>
+
+      <div class="signal">
+        <div class="signal-label">Comp Reality Check</div>
+        <p>&ldquo;The published range is structured so the midpoint reads as the &lsquo;safe&rsquo; offer and the upper third requires you to demonstrate something specific in the interview that does not already appear on your resume. Given the seniority of this role and the depth of your portfolio work, you have the leverage to anchor in the upper third, but only if you walk in with a concrete framing for how you would architect the team&rsquo;s first 18 months, not just discuss it conceptually. Negotiate the performance bonus structure separately from base. The two move on different cycles.&rdquo;</p>
+      </div>
+
+      <div class="signal">
+        <div class="signal-label">The Verdict</div>
+        <p>&ldquo;Full-funnel paid media ownership with executive visibility inside a high-performing business division. This is not a role where you inherit a working system and optimize at the margins. It is a mandate to elevate the strategic architecture of how a multi-product portfolio goes to market. Walk into the interview with a clear narrative about how you connect brand investment to pipeline outcomes.&rdquo;</p>
+      </div>
+    </div>
+
+    <p style="font-size: 13px; color: var(--faint); text-align: center; margin-top: 16px;">
+      Every report decodes a different role with signals tailored to it. <a href="https://b2bmarketcraft.com/about-marketcraft-job-signals-report" style="color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--accent); padding-bottom: 1px;">See more samples</a>
+    </p>
+  </div>
+</section>
+
+<!-- ===================== 10 SIGNALS ===================== -->
+<section>
+  <div class="container">
+    <h2 class="sec">What every report does for you.</h2>
+    <p class="lede">Ten core signals, plus an average of two more tailored to your specific role. Every signal is read against your resume.</p>
+
+    <div class="inside-grid">
+      <ul>
+        <li>
+          <span class="num">01</span>
+          <div class="ig-text">
+            <strong>The Real Ask</strong>
+            <span class="desc">What the role is actually hiring for, separate from how the job description reads.</span>
+          </div>
+        </li>
+        <li>
+          <span class="num">02</span>
+          <div class="ig-text">
+            <strong>What&rsquo;s On The Line</strong>
+            <span class="desc">Stakes, visibility, and what underperformance in the first year would cost.</span>
+          </div>
+        </li>
+        <li>
+          <span class="num">03</span>
+          <div class="ig-text">
+            <strong>Your Winning Angle</strong>
+            <span class="desc">The pairing of experiences from your resume the rest of the field is unlikely to match.</span>
+          </div>
+        </li>
+        <li>
+          <span class="num">04</span>
+          <div class="ig-text">
+            <strong>The Question To Ask</strong>
+            <span class="desc">One interview question that surfaces strategic intelligence and signals you think at the level of the role.</span>
+          </div>
+        </li>
+        <li>
+          <span class="num">05</span>
+          <div class="ig-text">
+            <strong>What Success Really Looks Like</strong>
+            <span class="desc">The 90-day and 12-month benchmarks the company will quietly judge you against.</span>
+          </div>
+        </li>
+        <li>
+          <span class="num">06</span>
+          <div class="ig-text">
+            <strong>The Stakeholder Map</strong>
+            <span class="desc">Who you will actually navigate internally, beyond the org chart.</span>
+          </div>
+        </li>
+        <li>
+          <span class="num">07</span>
+          <div class="ig-text">
+            <strong>The Unwritten Prereq</strong>
+            <span class="desc">What the listing labels a &ldquo;bonus&rdquo; that the winning candidate treats as core.</span>
+          </div>
+        </li>
+        <li>
+          <span class="num">08</span>
+          <div class="ig-text">
+            <strong>Comp Reality Check</strong>
+            <span class="desc">Where to anchor in the range, and how to structure base, equity, bonus, and sign-on.</span>
+          </div>
+        </li>
+        <li>
+          <span class="num">09</span>
+          <div class="ig-text">
+            <strong>The Buzzword Decoder</strong>
+            <span class="desc">What the technical language in the listing signals about the team&rsquo;s sophistication.</span>
+          </div>
+        </li>
+        <li>
+          <span class="num">10</span>
+          <div class="ig-text">
+            <strong>The Verdict</strong>
+            <span class="desc">A direct read on the role, the angle to lead with, and what to walk in prepared to do.</span>
+          </div>
+        </li>
+        <li class="placeholder">
+          <span class="num">11</span>
+          <div class="ig-text">
+            <strong>Tailored signal</strong>
+            <span class="desc">Selected based on the role. Past examples: &ldquo;Hiring Speed Read,&rdquo; &ldquo;The Cultural Tell.&rdquo;</span>
+          </div>
+        </li>
+        <li class="placeholder">
+          <span class="num">12</span>
+          <div class="ig-text">
+            <strong>Tailored signal</strong>
+            <span class="desc">Selected based on the role. Past examples: &ldquo;The First-90-Days Trap,&rdquo; &ldquo;The Internal Politics Read.&rdquo;</span>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== WHO FOR ===================== -->
+<section>
+  <div class="container">
+    <h2 class="sec">Who this is for.</h2>
+    <div class="audience">
+      <p><strong>B2B marketers evaluating their next role.</strong> You already know how to read a job description. You are not here for literacy. You are here for the layer underneath: what the language signals about the team, the stakes, the politics, and the negotiation, read against the background you actually bring.</p>
+      <p>Demand generation, paid acquisition, campaign management, product marketing, revenue operations, growth, lifecycle, sales leadership, and adjacent functions. The framework is calibrated to B2B marketing roles across all levels.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FAQ ===================== -->
+<section>
+  <div class="container">
+    <h2 class="sec">Common questions.</h2>
+
+    <div class="faq-item">
+      <div class="faq-q">How does this work after I pay?</div>
+      <div class="faq-a">After checkout, you land on a short form. Paste the job description and attach a version of your resume. Both are required, and the resume can be abridged or outdated if that is what is handy. The report is generated and emailed to you in under 10 minutes.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">Why do you need my resume?</div>
+      <div class="faq-a">Without your resume the report is a generic decode of the job description. With it, every signal is read against your actual background. The report tells you which of your experiences are highest-value to lead with against this role, which to deprioritize, and how to frame your story for what the hiring team is actually evaluating. The resume is what makes it personal.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">What happens to my job description and resume after I submit them?</div>
+      <div class="faq-a">Both are used only to generate your report. Neither is stored beyond what is necessary to deliver it. We do not sell data, do not use it for training, and do not share it.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">Will this rewrite my resume for me?</div>
+      <div class="faq-a">No. The report reads your resume against the role so it can tell you which experiences to lead with and which to deprioritize. The actual edit is yours. Most people find it takes about 30 minutes once they know what to aim at.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">What if I am evaluating more than one role?</div>
+      <div class="faq-a">There is a 7-day trial of the monthly plan that includes 30 reports per month. If you are looking at three or more roles, the trial is the math. After the trial, it is $19 a month and you can cancel anytime.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">Is this written by AI?</div>
+      <div class="faq-a">Reports are generated using a structured prompt against Claude, with the framework, the signals, and the analytical rules locked. The framework is the product. The model is the engine.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">Refunds?</div>
+      <div class="faq-a">If the report misses on something material, reply to the delivery email and you will get your $7 back. No questions.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FINAL CTA ===================== -->
+<section>
+  <div class="container">
+    <div class="final-cta">
+      <h2>Don&rsquo;t walk in reading the wrong job description.</h2>
+      <p>One job description. Ten or more signals. Seven dollars.</p>
+      <a class="cta" href="https://buy.stripe.com/bJe6oAeCX34NaHR0bZ0kE08" data-fbevent="initiate_checkout">Get the report for $7</a>
+      <p style="margin-top: 18px; font-size: 13px; color: var(--faint);">Or <a href="https://buy.stripe.com/eVq8wI66r6gZ8zJaQD0kE04" style="color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--accent);" data-fbevent="trial_click">start a 7-day trial of the monthly plan</a> if you are evaluating more than one role.</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div>&copy; 2026 B2B Marketcraft &middot; <a href="mailto:support@b2bmarketcraft.com" style="margin-left: 0;">support@b2bmarketcraft.com</a></div>
+    <div>
+      <a href="https://billing.stripe.com/p/login/eVq5kwcuP20J5nx8Iv0kE00">Manage subscription</a>
+      <a href="https://b2bmarketcraft.com">b2bmarketcraft.com</a>
+    </div>
+  </div>
+</footer>
+
+<!-- ============================================================
+     CONVERSION EVENTS
+     - PageView fires from the base Pixel above.
+     - InitiateCheckout fires when a $7 button is clicked.
+     - TrialButtonClick (custom) fires when the trial link is clicked.
+     - Purchase fires on the Stripe success page, not here.
+     ============================================================ -->
+<script>
+  document.querySelectorAll('[data-fbevent="initiate_checkout"]').forEach(function (el) {
+    el.addEventListener('click', function () {
+      if (typeof fbq === 'function') {
+        fbq('track', 'InitiateCheckout', {
+          value: 7.00,
+          currency: 'USD',
+          content_name: 'Job Signals Report'
+        });
+      }
+    });
+  });
+  document.querySelectorAll('[data-fbevent="trial_click"]').forEach(function (el) {
+    el.addEventListener('click', function () {
+      if (typeof fbq === 'function') {
+        fbq('trackCustom', 'TrialButtonClick');
+      }
+    });
+  });
+</script>
+
+</body>
+</html>

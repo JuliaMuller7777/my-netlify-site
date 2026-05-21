@@ -1,26 +1,31 @@
-# My Netlify Site
+# B2B Marketcraft — Job Signals Report landing pages
 
-A starter static website (HTML / CSS / JavaScript) deployed from GitHub to Netlify.
+Static landing pages for the $7 job signals report, deployed from GitHub to Netlify.
 
-## What's in here
+## Pages
 
-| File | Purpose |
-|------|---------|
-| `index.html` | The page itself |
-| `css/style.css` | Styling, including a dark-mode theme |
-| `js/script.js` | A live clock and dark-mode toggle |
-| `netlify.toml` | Netlify deploy settings (no build step) |
-| `.gitignore` | Files Git should ignore |
+| File | Live URL | What it is |
+|------|----------|------------|
+| `index.html` | `/` | Simple hub linking to both variants |
+| `direct.html` | `/direct` | Variant A — direct / feature-led landing page |
+| `story.html` | `/story` | Variant B — story-led landing page (founder narrative) |
+
+`direct.html` and `story.html` are A/B variants of the same $7 offer.
+
+## Checkout buttons
+
+The $7 Stripe Payment Link is wired into every checkout button — 2 buttons
+in `direct.html` and 3 in `story.html`:
+
+`https://buy.stripe.com/bJe6oAeCX34NaHR0bZ0kE08`
+
+Still outstanding for `story.html`: a Meta Pixel is installed, and there is
+a TODO for an Open Graph share image (`og:image`). In Stripe, set the
+Payment Link's success/redirect URL to your post-purchase form page so the
+Meta Purchase conversion event fires after checkout.
 
 ## How deployment works
 
-This repository is connected to Netlify. Every time you push a change to the
-`main` branch on GitHub, Netlify automatically rebuilds and publishes the site.
-
-## Editing the site
-
-1. Change the files on GitHub (or on your computer).
-2. Commit / push the change to the `main` branch.
-3. Netlify redeploys within a minute or so.
-
-No build tools or terminal required — this is a plain static site.
+This repository is connected to Netlify. Every push to the `main` branch
+triggers an automatic redeploy. No build tools required — these are plain
+static HTML files.

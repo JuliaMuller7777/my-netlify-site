@@ -1,33 +1,151 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>My Netlify Site</title>
-  <meta name="description" content="A starter static site deployed from GitHub to Netlify." />
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🚀</text></svg>" />
-  <link rel="stylesheet" href="css/style.css" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Job Signals Report — landing pages | B2B Marketcraft</title>
+<meta name="robots" content="noindex">
+<link rel="icon" href="https://b2bmarketcraft.com/favicon.ico">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #f9f8f6;
+    --card: #ffffff;
+    --accent: #8C1A1A;
+    --accent-dark: #6e1414;
+    --border: #e0dbd6;
+    --text: #0f0f0f;
+    --muted: #5e5a55;
+    --faint: #8a857f;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Manrope', -apple-system, BlinkMacSystemFont, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+    min-height: 100vh;
+  }
+  .topbar { border-bottom: 1px solid var(--border); }
+  .topbar-inner {
+    display: flex;
+    align-items: center;
+    padding: 18px 24px;
+    max-width: 1100px;
+    margin: 0 auto;
+    font-size: 14px;
+  }
+  .brand { font-weight: 700; letter-spacing: 0.02em; }
+  .brand .dot { color: var(--accent); }
+
+  .wrap { max-width: 720px; margin: 0 auto; padding: 72px 24px 64px; }
+  .eyebrow {
+    font-size: 12px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--accent);
+    font-weight: 700;
+    margin-bottom: 18px;
+  }
+  h1 {
+    font-size: 36px;
+    line-height: 1.15;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    margin-bottom: 16px;
+  }
+  .intro {
+    font-size: 17px;
+    color: var(--muted);
+    margin-bottom: 40px;
+    max-width: 560px;
+  }
+
+  .card {
+    display: block;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 28px 30px;
+    margin-bottom: 18px;
+    text-decoration: none;
+    color: inherit;
+    transition: border-color 0.15s, transform 0.1s;
+  }
+  .card:hover { border-color: var(--accent); transform: translateY(-2px); }
+  .card-tag {
+    font-size: 11px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--accent);
+    font-weight: 700;
+    margin-bottom: 8px;
+  }
+  .card-title {
+    font-size: 21px;
+    font-weight: 800;
+    letter-spacing: -0.01em;
+    margin-bottom: 6px;
+  }
+  .card-desc { font-size: 14.5px; color: var(--muted); margin-bottom: 12px; }
+  .card-url {
+    font-size: 13px;
+    color: var(--accent);
+    font-weight: 700;
+  }
+  .card-url::after { content: " →"; }
+
+  footer {
+    border-top: 1px solid var(--border);
+    padding: 24px;
+    font-size: 13px;
+    color: var(--faint);
+    text-align: center;
+  }
+  footer a { color: var(--faint); text-decoration: none; }
+  footer a:hover { color: var(--text); }
+
+  @media (max-width: 600px) {
+    h1 { font-size: 28px; }
+    .wrap { padding: 48px 22px 48px; }
+    .card { padding: 24px 22px; }
+  }
+</style>
 </head>
 <body>
-  <main class="card">
-    <div class="badge">Live on Netlify</div>
-    <h1>It works! 🚀</h1>
-    <p>
-      This site is hosted on <strong>Netlify</strong> and deployed straight
-      from a <strong>GitHub</strong> repository. Edit the files, push your
-      changes, and Netlify rebuilds automatically.
-    </p>
 
-    <div class="clock" id="clock">--:--:--</div>
+<div class="topbar">
+  <div class="topbar-inner">
+    <div class="brand">B2B <span class="dot">·</span> MARKETCRAFT</div>
+  </div>
+</div>
 
-    <button id="themeBtn" type="button">Toggle dark mode</button>
+<div class="wrap">
+  <div class="eyebrow">Job Signals Report · $7</div>
+  <h1>Two landing pages, one offer.</h1>
+  <p class="intro">These are the two live landing-page variants for the $7 job signals report. Open either one below. They sell the same product with different angles, so traffic can be pointed at whichever variant you are testing.</p>
 
-    <footer>
-      <p>Edit <code>index.html</code>, <code>css/style.css</code>, and
-      <code>js/script.js</code> to make this site your own.</p>
-    </footer>
-  </main>
+  <a class="card" href="/direct">
+    <div class="card-tag">Variant A · Direct</div>
+    <div class="card-title">See what the job description won't tell you.</div>
+    <div class="card-desc">Feature-led page. Opens straight on the offer, the sample report, and what every report delivers.</div>
+    <div class="card-url">/direct</div>
+  </a>
 
-  <script src="js/script.js"></script>
+  <a class="card" href="/story">
+    <div class="card-tag">Variant B · Story-led</div>
+    <div class="card-title">She didn't lose the interview because she wasn't good enough.</div>
+    <div class="card-desc">Narrative-led page. Opens with the founder story of why B2B Marketcraft exists, then moves to the offer.</div>
+    <div class="card-url">/story</div>
+  </a>
+</div>
+
+<footer>
+  © 2026 B2B Marketcraft · <a href="mailto:support@b2bmarketcraft.com">support@b2bmarketcraft.com</a> · <a href="https://b2bmarketcraft.com">b2bmarketcraft.com</a>
+</footer>
+
 </body>
 </html>

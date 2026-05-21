@@ -1,13 +1,12 @@
-# Netlify configuration for a static HTML/CSS/JS site.
-# No build step is needed — Netlify just publishes the files as-is.
+# Netlify configuration — static HTML site, no build step.
+# The pages are plain HTML files, so Netlify just publishes them as-is.
 
 [build]
-  # The folder Netlify publishes. "." means the repository root.
+  # Publish the repository root (where the .html files live).
   publish = "."
 
-# Optional: send any unknown URL to index.html with a 200 status.
-# Handy later if you add client-side routing. Safe to leave in place.
-[[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
+# Netlify's "Pretty URLs" (on by default) means:
+#   direct.html  is served at  /direct
+#   story.html   is served at  /story
+#   index.html   is served at  /
+# No redirect rules are needed for this multi-page site.
