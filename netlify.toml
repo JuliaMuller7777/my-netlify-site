@@ -1,0 +1,13 @@
+# Netlify configuration for a static HTML/CSS/JS site.
+# No build step is needed — Netlify just publishes the files as-is.
+
+[build]
+  # The folder Netlify publishes. "." means the repository root.
+  publish = "."
+
+# Optional: send any unknown URL to index.html with a 200 status.
+# Handy later if you add client-side routing. Safe to leave in place.
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
