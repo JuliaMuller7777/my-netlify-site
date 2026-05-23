@@ -8,31 +8,22 @@
 
 <!--
   ============================================================
-  B2B MARKETCRAFT - $7 JOB SIGNALS REPORT - LANDING PAGE V2 (story-led)
+  B2B MARKETCRAFT - $7 JOB SIGNALS REPORT - STORY-LED LANDING PAGE
+  Served at pages.b2bmarketcraft.com/story
   ============================================================
-  This is the story-led variant. It opens with the founder narrative.
-  It is the A/B counterpart to the existing direct/feature-led page.
+  Story-led variant. Opens with the founder narrative.
+  A/B counterpart to the direct/feature-led page at /direct.
 
-  BEFORE THIS GOES LIVE ON NETLIFY - status of three setup items:
+  STATUS:
+  1. STRIPE $7 LINK - DONE. Wired into the three $7 buttons.
+  2. STRIPE SUCCESS URL - DONE. The $7 Payment Link redirects to
+     https://b2bmarketcraft.com/job-signals-report-submission,
+     which is the page that fires the Purchase event in Meta.
+  3. OG SHARE IMAGE - still TODO. Add a 1200x630 og:image when ready.
 
-  1. STRIPE $7 LINK - DONE. The $7 Stripe Payment Link
-     (buy.stripe.com/bJe6oAeCX34NaHR0bZ0kE08) is wired into all
-     three $7 buttons below.
-
-  2. STRIPE SUCCESS URL - in that Payment Link's settings, set the
-     confirmation/redirect page to your post-purchase form URL
-     (the /job-signals-report-submission page). THAT url is the page
-     that fires the Purchase conversion event in Meta. Define it once,
-     here and in Stripe, so they match.
-
-  3. OG SHARE IMAGE - add a 1200x630 og:image once one exists
-     (marked TODO below).
-
-  Meta Pixel (ID 2556097768173758) is already installed in <head>.
-  It fires PageView on load, and InitiateCheckout when a $7 button is
-  clicked. Purchase fires on the Stripe success page, not on this page.
-  This is a separate Netlify site from the Framer b2bmarketcraft.com
-  site, so this Pixel snippet is required here on its own.
+  Meta Pixel (ID 2556097768173758) is installed in <head>: fires
+  PageView on load, InitiateCheckout on $7 button click. Purchase
+  fires on the Stripe success page, not here.
   ============================================================
 -->
 
@@ -543,7 +534,7 @@ src="https://www.facebook.com/tr?id=2556097768173758&ev=PageView&noscript=1"/></
     <div class="brand">B2B <span class="dot">&middot;</span> MARKETCRAFT</div>
     <nav>
       <a href="https://b2bmarketcraft.com/about-marketcraft-job-signals-report">About the report</a>
-      <a href="https://b2bmarketcraft.com" class="always">Monthly plans</a>
+      <a href="https://b2bmarketcraft.com/pricing" class="always">Monthly plans</a>
     </nav>
   </div>
 </div>
@@ -605,7 +596,7 @@ src="https://www.facebook.com/tr?id=2556097768173758&ev=PageView&noscript=1"/></
       <div class="option-line">
         <span class="or">or</span>
         <p>Evaluating more than one role? Get this report <strong>free</strong> inside a 7-day trial of the monthly plan. <strong>30 reports a month, $19</strong> after the trial. Cancel anytime.</p>
-        <a class="olink" href="https://buy.stripe.com/eVq8wI66r6gZ8zJaQD0kE04" data-fbevent="trial_click">Start the 7-day trial instead</a>
+        <a class="olink" href="https://buy.stripe.com/7sYdR27avfRz7vFcYL0kE09" data-fbevent="trial_click">Start the 7-day trial instead</a>
         <div class="micro">Card required. Renews monthly. No charge during the trial.</div>
       </div>
     </div>
@@ -656,103 +647,6 @@ src="https://www.facebook.com/tr?id=2556097768173758&ev=PageView&noscript=1"/></
     <p style="font-size: 13px; color: var(--faint); text-align: center; margin-top: 16px;">
       Every report decodes a different role with signals tailored to it. <a href="https://b2bmarketcraft.com/about-marketcraft-job-signals-report" style="color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--accent); padding-bottom: 1px;">See more samples</a>
     </p>
-  </div>
-</section>
-
-<!-- ===================== 10 SIGNALS ===================== -->
-<section>
-  <div class="container">
-    <h2 class="sec">What every report does for you.</h2>
-    <p class="lede">Ten core signals, plus an average of two more tailored to your specific role. Every signal is read against your resume.</p>
-
-    <div class="inside-grid">
-      <ul>
-        <li>
-          <span class="num">01</span>
-          <div class="ig-text">
-            <strong>The Real Ask</strong>
-            <span class="desc">What the role is actually hiring for, separate from how the job description reads.</span>
-          </div>
-        </li>
-        <li>
-          <span class="num">02</span>
-          <div class="ig-text">
-            <strong>What&rsquo;s On The Line</strong>
-            <span class="desc">Stakes, visibility, and what underperformance in the first year would cost.</span>
-          </div>
-        </li>
-        <li>
-          <span class="num">03</span>
-          <div class="ig-text">
-            <strong>Your Winning Angle</strong>
-            <span class="desc">The pairing of experiences from your resume the rest of the field is unlikely to match.</span>
-          </div>
-        </li>
-        <li>
-          <span class="num">04</span>
-          <div class="ig-text">
-            <strong>The Question To Ask</strong>
-            <span class="desc">One interview question that surfaces strategic intelligence and signals you think at the level of the role.</span>
-          </div>
-        </li>
-        <li>
-          <span class="num">05</span>
-          <div class="ig-text">
-            <strong>What Success Really Looks Like</strong>
-            <span class="desc">The 90-day and 12-month benchmarks the company will quietly judge you against.</span>
-          </div>
-        </li>
-        <li>
-          <span class="num">06</span>
-          <div class="ig-text">
-            <strong>The Stakeholder Map</strong>
-            <span class="desc">Who you will actually navigate internally, beyond the org chart.</span>
-          </div>
-        </li>
-        <li>
-          <span class="num">07</span>
-          <div class="ig-text">
-            <strong>The Unwritten Prereq</strong>
-            <span class="desc">What the listing labels a &ldquo;bonus&rdquo; that the winning candidate treats as core.</span>
-          </div>
-        </li>
-        <li>
-          <span class="num">08</span>
-          <div class="ig-text">
-            <strong>Comp Reality Check</strong>
-            <span class="desc">Where to anchor in the range, and how to structure base, equity, bonus, and sign-on.</span>
-          </div>
-        </li>
-        <li>
-          <span class="num">09</span>
-          <div class="ig-text">
-            <strong>The Buzzword Decoder</strong>
-            <span class="desc">What the technical language in the listing signals about the team&rsquo;s sophistication.</span>
-          </div>
-        </li>
-        <li>
-          <span class="num">10</span>
-          <div class="ig-text">
-            <strong>The Verdict</strong>
-            <span class="desc">A direct read on the role, the angle to lead with, and what to walk in prepared to do.</span>
-          </div>
-        </li>
-        <li class="placeholder">
-          <span class="num">11</span>
-          <div class="ig-text">
-            <strong>Tailored signal</strong>
-            <span class="desc">Selected based on the role. Past examples: &ldquo;Hiring Speed Read,&rdquo; &ldquo;The Cultural Tell.&rdquo;</span>
-          </div>
-        </li>
-        <li class="placeholder">
-          <span class="num">12</span>
-          <div class="ig-text">
-            <strong>Tailored signal</strong>
-            <span class="desc">Selected based on the role. Past examples: &ldquo;The First-90-Days Trap,&rdquo; &ldquo;The Internal Politics Read.&rdquo;</span>
-          </div>
-        </li>
-      </ul>
-    </div>
   </div>
 </section>
 
@@ -816,7 +710,7 @@ src="https://www.facebook.com/tr?id=2556097768173758&ev=PageView&noscript=1"/></
       <h2>Don&rsquo;t walk in reading the wrong job description.</h2>
       <p>One job description. Ten or more signals. Seven dollars.</p>
       <a class="cta" href="https://buy.stripe.com/bJe6oAeCX34NaHR0bZ0kE08" data-fbevent="initiate_checkout">Get the report for $7</a>
-      <p style="margin-top: 18px; font-size: 13px; color: var(--faint);">Or <a href="https://buy.stripe.com/eVq8wI66r6gZ8zJaQD0kE04" style="color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--accent);" data-fbevent="trial_click">start a 7-day trial of the monthly plan</a> if you are evaluating more than one role.</p>
+      <p style="margin-top: 18px; font-size: 13px; color: var(--faint);">Or <a href="https://buy.stripe.com/7sYdR27avfRz7vFcYL0kE09" style="color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--accent);" data-fbevent="trial_click">start a 7-day trial of the monthly plan</a> if you are evaluating more than one role.</p>
     </div>
   </div>
 </section>

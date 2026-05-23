@@ -4,12 +4,66 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Decode the job description before the interview — $7 | B2B Marketcraft</title>
+<meta name="description" content="Drop in a B2B marketing job description plus your resume. Get a decoded report — the Real Ask, the Question To Ask, Comp Reality Check, and the Verdict — in under 10 minutes. $7.">
+
+<!--
+  ============================================================
+  B2B MARKETCRAFT - $7 JOB SIGNALS REPORT - DIRECT LANDING PAGE
+  Served at pages.b2bmarketcraft.com/direct
+  ============================================================
+  Direct / feature-led variant. Opens straight on the offer.
+  A/B counterpart to the story-led page at /story.
+
+  Meta Pixel (ID 2556097768173758) is installed in <head>: fires
+  PageView on load, InitiateCheckout on $7 button click, and a
+  TrialButtonClick custom event on the trial link. Purchase fires
+  on the Stripe success page, not here.
+  ============================================================
+-->
+
+<!-- Open Graph / social sharing -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Decode the job description before the interview — $7">
+<meta property="og:description" content="One job description. One resume. One report. Ten or more signals in under 10 minutes.">
+<meta property="og:site_name" content="B2B Marketcraft">
+<!-- TODO: add og:image once a 1200x630 share card exists -->
+<!-- <meta property="og:image" content="https://b2bmarketcraft.com/og-job-signals.png"> -->
+<meta name="twitter:card" content="summary_large_image">
+
+<!-- Favicon (using the main site's favicon — replace if you want a unique one) -->
+<link rel="icon" href="https://b2bmarketcraft.com/favicon.ico">
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<!-- ============================================================
+     META (FACEBOOK) PIXEL - base code, ID 2556097768173758
+     Fires PageView on every page load.
+     ============================================================ -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '2556097768173758');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=2556097768173758&ev=PageView&noscript=1"/></noscript>
+<!-- End Meta Pixel Code -->
+
+<!-- GOOGLE ADS / GA4: paste gtag.js snippet here if needed -->
+<!-- LINKEDIN INSIGHT TAG: paste here if needed -->
+<!-- TIKTOK / REDDIT / OTHER: paste here as needed -->
+
 <style>
   :root {
-    --bg: #f9f8f6;
+    --bg: #ffffff;
     --card: #ffffff;
     --accent: #8C1A1A;
     --accent-dark: #6e1414;
@@ -168,7 +222,7 @@
   }
   .option-line .or {
     display: inline-block;
-    background: var(--bg);
+    background: var(--card);
     padding: 0 12px;
     color: var(--faint);
     font-size: 12px;
@@ -213,7 +267,7 @@
     margin-bottom: 24px;
   }
 
-  /* Sample card — quotes from the Intuit report */
+  /* Sample card */
   .sample-intro {
     font-size: 14px;
     color: var(--faint);
@@ -260,7 +314,7 @@
     line-height: 1.6;
   }
 
-  /* Inside the report — bullets */
+  /* "What every report does for you" — slimmed grid */
   .inside-grid {
     background: var(--card);
     border: 1px solid var(--border);
@@ -290,9 +344,16 @@
     margin-bottom: 2px;
     font-weight: 600;
   }
-  .inside-grid .ig-text span {
+  .inside-grid .ig-text .desc {
+    display: block;
     color: var(--muted);
     font-size: 14px;
+    line-height: 1.55;
+  }
+  .inside-grid .placeholder strong {
+    color: var(--faint);
+    font-style: italic;
+    font-weight: 500;
   }
 
   /* Who this is for */
@@ -379,7 +440,7 @@
     <div class="brand">B2B <span class="dot">·</span> MARKETCRAFT</div>
     <nav>
       <a href="https://b2bmarketcraft.com/about-marketcraft-job-signals-report">About the report</a>
-      <a href="https://b2bmarketcraft.com" class="always">Monthly plans</a>
+      <a href="https://b2bmarketcraft.com/pricing" class="always">Monthly plans</a>
     </nav>
   </div>
 </div>
@@ -403,13 +464,13 @@
       <div class="price">$7</div>
       <div class="price-note">One-time. One report. Yours to keep.</div>
     </div>
-    <a class="cta" href="https://buy.stripe.com/bJe6oAeCX34NaHR0bZ0kE08">Get the report — $7</a>
+    <a class="cta" href="https://buy.stripe.com/bJe6oAeCX34NaHR0bZ0kE08" data-event="buy_7_top" data-fbevent="initiate_checkout">Get the report — $7</a>
     <div class="cta-sub">After checkout you will get a short form. Paste the job description and attach a version of your resume. Both are required. The resume can be abridged or outdated, just give us something representative of your background. Report lands in your inbox in under 10 minutes.</div>
 
     <div class="option-line">
       <span class="or">or</span>
-      <p>Evaluating more than one role? Get this report <strong>free</strong> inside a 7-day trial of <strong>Stride</strong>. 30 reports a month, $19 after the trial. Cancel anytime.</p>
-      <a href="https://buy.stripe.com/eVq8wI66r6gZ8zJaQD0kE04">Start the 7-day trial instead →</a>
+      <p>Evaluating more than one role? Get this report <strong>free</strong> during a 7-day trial of the monthly plan. <strong>30 reports a month, $19</strong> after the trial. Cancel anytime.</p>
+      <a href="https://buy.stripe.com/7sYdR27avfRz7vFcYL0kE09" data-event="start_trial_top" data-fbevent="trial_click">Start the 7-day trial instead →</a>
       <div class="micro">Card required. Renews monthly. No charge during trial.</div>
     </div>
   </div>
@@ -418,30 +479,40 @@
 <section>
   <div class="container">
     <h2>This is what one report actually says.</h2>
-    <p class="lede">Real excerpts from a recent report on a senior paid media role at a large financial technology company. Names redacted. Output verbatim.</p>
+    <p class="lede">Real excerpts from one recent report. Yours will look different — every report is uniquely structured to the role and your background. Names redacted. Output verbatim.</p>
 
     <div class="sample-card">
       <div class="role">Sample · Demand Generation</div>
-      <div class="title">Paid Media Staff Marketing Manager</div>
+      <div class="title">Senior Manager, Paid Media</div>
 
       <div class="signal">
         <div class="signal-label">The Real Ask</div>
-        <p>"This role is not looking for a channel executor. They want the person who owns the full paid media vision and is accountable for every dollar from brand awareness to conversion. The phrase 'revolutionize the way we go to market' signals the current approach is either stale or under-resourced — they need someone with a point of view, not someone to optimize what exists."</p>
+        <p>"This role is not looking for a channel executor who reports up to a strategy owner — they want the person who owns the full paid media vision and is accountable for every dollar from brand awareness to conversion. The phrase 'revolutionize the way we go to market' signals that the current approach is either stale or under-resourced, and they need someone who will come in with a point of view, not just optimize what exists."</p>
       </div>
 
       <div class="signal">
         <div class="signal-label">The Question To Ask</div>
-        <p>"Ask: 'How is media performance measured across the four products — individual product-level cost-per-acquisition targets, or a shared portfolio efficiency metric, and who owns that definition?' This surfaces whether there is internal alignment on success, reveals how much budget autonomy you will actually have, and signals you think in portfolio architecture rather than isolated campaigns."</p>
+        <p>"How is media performance currently measured across the product portfolio — are channels evaluated against individual product-level cost-per-acquisition targets, or is there a shared portfolio efficiency metric, and who owns that definition? This question does three things at once: it surfaces whether there is internal alignment on success criteria, it reveals how much budget autonomy you will actually have, and it signals that you think in terms of portfolio architecture rather than isolated campaigns."</p>
+      </div>
+
+      <div class="signal">
+        <div class="signal-label">What Success Really Looks Like</div>
+        <p>"At 90 days they will expect a written diagnosis of where the current paid media spend is leaking — not a strategy deck. By month 12 they will expect at least one campaign restructure that produced measurable lift on a metric the CFO already tracks. Anything you do that does not ladder to a number on the company's existing scorecard will be invisible."</p>
       </div>
 
       <div class="signal">
         <div class="signal-label">The Unwritten Prereq</div>
-        <p>"Listed as 'a bonus,' but given the audience is tax professionals — a finite, identifiable, highly specific segment — account-based marketing thinking is almost certainly the operating model for mid-funnel and pipeline acceleration. The candidates who lose this role present ABM as a nice-to-have they have dabbled in. The candidate who wins positions it as a core competency with specific proof of how it changed audience targeting and pipeline quality."</p>
+        <p>"The listing calls 'experience with attribution modeling' a plus. In context, it is not — it is the prerequisite for everything else. Walk in with a specific point of view on the limits of last-touch and the right cutover criteria to multi-touch, or you will not be the candidate they remember."</p>
       </div>
 
       <div class="signal">
         <div class="signal-label">Comp Reality Check</div>
-        <p>"The published range represents nearly $55,000 in variance — how you position yourself in the negotiation matters enormously. Do not accept an offer anchored at the midpoint without a direct conversation about equity, performance bonus structure, and annual review cycles. At this level, total compensation architecture matters as much as base salary."</p>
+        <p>"The published range is structured so the midpoint reads as the 'safe' offer and the upper third requires you to demonstrate something specific in the interview that does not already appear on your resume. Given the seniority of this role and the depth of your portfolio work, you have the leverage to anchor in the upper third — but only if you walk in with a concrete framing for how you would architect the team's first 18 months, not just discuss it conceptually. Negotiate the performance bonus structure separately from base; the two move on different cycles."</p>
+      </div>
+
+      <div class="signal">
+        <div class="signal-label">The Verdict</div>
+        <p>"Full-funnel paid media ownership with executive visibility inside a high-performing business division. This is not a role where you inherit a working system and optimize at the margins. It is a mandate to elevate the strategic architecture of how a multi-product portfolio goes to market. Walk into the interview with a clear narrative about how you connect brand investment to pipeline outcomes."</p>
       </div>
     </div>
 
@@ -451,17 +522,97 @@
   </div>
 </section>
 
-<section style="background: var(--bg);">
+<section>
   <div class="container">
     <h2>What every report does for you.</h2>
-    <p class="lede">Ten or more signals per report. Each one calibrated to the specific role and read against your resume.</p>
+    <p class="lede">Ten core signals, plus an average of two more tailored to your specific role. Every signal is read against your resume.</p>
 
     <div class="inside-grid">
       <ul>
-        <li><div class="ig-text"><strong>Decodes the role.</strong><span>What the hiring team is actually hiring for, what is at stake, and how they will measure success at 90 days and 12 months.</span></div></li>
-        <li><div class="ig-text"><strong>Positions you.</strong><span>Every signal is read against your resume so you know which experiences to lead with, which to deprioritize, and where your background lines up with what the hiring team is actually evaluating.</span></div></li>
-        <li><div class="ig-text"><strong>Hands you the interview play.</strong><span>The strategic question that signals authority. The stakeholder politics you did not know you would be navigating. The requirement labeled as a "bonus" that is actually a core test.</span></div></li>
-        <li><div class="ig-text"><strong>Reads the compensation.</strong><span>Where in the published range your experience profile should land, and how to talk about it without leaving money on the table.</span></div></li>
+        <li>
+          <span class="num">01</span>
+          <div class="ig-text">
+            <strong>The Real Ask</strong>
+            <span class="desc">What the role is actually hiring for, separate from how the job description reads.</span>
+          </div>
+        </li>
+        <li>
+          <span class="num">02</span>
+          <div class="ig-text">
+            <strong>What's On The Line</strong>
+            <span class="desc">Stakes, visibility, and what underperformance in the first year would cost.</span>
+          </div>
+        </li>
+        <li>
+          <span class="num">03</span>
+          <div class="ig-text">
+            <strong>Your Winning Angle</strong>
+            <span class="desc">The pairing of experiences from your resume the rest of the field is unlikely to match.</span>
+          </div>
+        </li>
+        <li>
+          <span class="num">04</span>
+          <div class="ig-text">
+            <strong>The Question To Ask</strong>
+            <span class="desc">One interview question that surfaces strategic intelligence and signals you think at the level of the role.</span>
+          </div>
+        </li>
+        <li>
+          <span class="num">05</span>
+          <div class="ig-text">
+            <strong>What Success Really Looks Like</strong>
+            <span class="desc">The 90-day and 12-month benchmarks the company will quietly judge you against.</span>
+          </div>
+        </li>
+        <li>
+          <span class="num">06</span>
+          <div class="ig-text">
+            <strong>The Stakeholder Map</strong>
+            <span class="desc">Who you will actually navigate internally, beyond the org chart.</span>
+          </div>
+        </li>
+        <li>
+          <span class="num">07</span>
+          <div class="ig-text">
+            <strong>The Unwritten Prereq</strong>
+            <span class="desc">What the listing labels a "bonus" that the winning candidate treats as core.</span>
+          </div>
+        </li>
+        <li>
+          <span class="num">08</span>
+          <div class="ig-text">
+            <strong>Comp Reality Check</strong>
+            <span class="desc">Where to anchor in the range, and how to structure base, equity, bonus, and sign-on.</span>
+          </div>
+        </li>
+        <li>
+          <span class="num">09</span>
+          <div class="ig-text">
+            <strong>The Buzzword Decoder</strong>
+            <span class="desc">What the technical language in the listing signals about the team's sophistication.</span>
+          </div>
+        </li>
+        <li>
+          <span class="num">10</span>
+          <div class="ig-text">
+            <strong>The Verdict</strong>
+            <span class="desc">A direct read on the role, the angle to lead with, and what to walk in prepared to do.</span>
+          </div>
+        </li>
+        <li class="placeholder">
+          <span class="num">11</span>
+          <div class="ig-text">
+            <strong>Tailored signal</strong>
+            <span class="desc">Selected based on the role. Past examples: "Hiring Speed Read," "The Cultural Tell."</span>
+          </div>
+        </li>
+        <li class="placeholder">
+          <span class="num">12</span>
+          <div class="ig-text">
+            <strong>Tailored signal</strong>
+            <span class="desc">Selected based on the role. Past examples: "The First-90-Days Trap," "The Internal Politics Read."</span>
+          </div>
+        </li>
       </ul>
     </div>
   </div>
@@ -477,7 +628,7 @@
   </div>
 </section>
 
-<section style="background: var(--bg);">
+<section>
   <div class="container">
     <h2>Common questions.</h2>
 
@@ -503,7 +654,7 @@
 
     <div class="faq-item">
       <div class="faq-q">What if I am evaluating more than one role?</div>
-      <div class="faq-a">The 7-day trial of Stride gives you 30 reports a month. If you are looking at three or more roles, the trial is the math. Cancel inside the 7 days if it is not for you.</div>
+      <div class="faq-a">There is a 7-day trial of the monthly plan that includes 30 reports per month. If you are looking at three or more roles, the trial is the math. After the trial, it is $19 a month and you can cancel anytime.</div>
     </div>
 
     <div class="faq-item">
@@ -523,8 +674,8 @@
     <div class="final-cta">
       <h2>Decode the role before you walk in.</h2>
       <p>One job description. Ten or more signals. Seven dollars.</p>
-      <a class="cta" href="https://buy.stripe.com/bJe6oAeCX34NaHR0bZ0kE08">Get the report — $7</a>
-      <p style="margin-top: 18px; font-size: 13px; color: var(--faint);">Or <a href="https://buy.stripe.com/eVq8wI66r6gZ8zJaQD0kE04" style="color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--accent);">start a 7-day Stride trial</a> if you are evaluating more than one role.</p>
+      <a class="cta" href="https://buy.stripe.com/bJe6oAeCX34NaHR0bZ0kE08" data-event="buy_7_bottom" data-fbevent="initiate_checkout">Get the report — $7</a>
+      <p style="margin-top: 18px; font-size: 13px; color: var(--faint);">Or <a href="https://buy.stripe.com/7sYdR27avfRz7vFcYL0kE09" style="color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--accent);" data-event="start_trial_bottom" data-fbevent="trial_click">start a 7-day trial of the monthly plan</a> if you are evaluating more than one role.</p>
     </div>
   </div>
 </section>
@@ -538,6 +689,34 @@
     </div>
   </div>
 </footer>
+
+<!-- ============================================================
+     CONVERSION EVENTS
+     - PageView fires from the base Pixel above.
+     - InitiateCheckout fires when a $7 button is clicked.
+     - TrialButtonClick (custom) fires when the trial link is clicked.
+     - Purchase fires on the Stripe success page, not here.
+     ============================================================ -->
+<script>
+  document.querySelectorAll('[data-fbevent="initiate_checkout"]').forEach(function (el) {
+    el.addEventListener('click', function () {
+      if (typeof fbq === 'function') {
+        fbq('track', 'InitiateCheckout', {
+          value: 7.00,
+          currency: 'USD',
+          content_name: 'Job Signals Report'
+        });
+      }
+    });
+  });
+  document.querySelectorAll('[data-fbevent="trial_click"]').forEach(function (el) {
+    el.addEventListener('click', function () {
+      if (typeof fbq === 'function') {
+        fbq('trackCustom', 'TrialButtonClick');
+      }
+    });
+  });
+</script>
 
 </body>
 </html>
